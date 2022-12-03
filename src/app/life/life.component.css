@@ -1,0 +1,12 @@
+.square {
+    margin: 0 0 0 0;
+    height: 0px;
+    padding: 2px 2px 2px 2px;
+    border: 1px solid black;
+}
+
+.rowsq {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    height: 4px;
+}

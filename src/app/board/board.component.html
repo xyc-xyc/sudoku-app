@@ -1,0 +1,27 @@
+<mat-grid-list cols="9" rowHeight="54px">
+  <mat-grid-tile *ngFor="let cell of cells ; index as i">
+    <app-cell [cell]="cell" (chooseEvent)="choose($event, true)"></app-cell>
+  </mat-grid-tile>
+</mat-grid-list>
+<hr />
+<!-- <button (click)="test()">test</button> -->
+<button (click)="newboard()">new</button>
+
+<button (click)="record()">record</button>
+
+<button (click)="next()">next</button>
+<button (click)="undo()" [disabled]="steps.length==0">undo</button>
+<!-- 
+<button (click)="undo(true)" [disabled]="steps.length==0">undo to last try</button> -->
+<button (click)="resolve()">resolve</button>
+<label><input type="checkbox" [checked]="willGuessAndUndo" (click)="toggleGuessFlag()" style="width:20px;" />Guess</label>
+<hr />
+<div>
+  <label>Start:<input type="text" [value]="starttime" /></label>
+</div>
+<div>
+  <label>End:<input type="text" [value]="endtime" /></label>
+</div>
+<div>
+  {{status}}
+</div>

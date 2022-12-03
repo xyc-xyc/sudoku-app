@@ -1,0 +1,26 @@
+mat-grid-list {
+    width: 486px;
+    border: 1px solid;
+}
+
+mat-grid-tile {
+    border: 1px solid;
+}
+
+.thick-bottom {
+    border-bottom: 1px solid;
+}
+
+.thick-right {
+    border-right: 1px solid;
+}
+
+button {
+    width: 80px;
+    height: 30px;
+    margin-right: 0.5em;
+}
+
+input {
+    width: 400px;
+}

@@ -1,0 +1,11 @@
+<mat-grid-list cols="3" rowHeight="18px" *ngIf="cell.value==0" [style.background]="bg">
+  <mat-grid-tile *ngFor="let tile of cell.candidates">
+    <button (click)="chooseme(tile)" *ngIf="tile.value>0" [style.backgroundColor]="tile.color">{{tile.value}}</button>
+    <button disabled *ngIf="tile.value==0"></button>
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list cols="1" rowHeight="54px" *ngIf="cell.value>0" [style.background]="bg">
+  <mat-grid-tile class="filledCell" [style.color]="cell.color">
+    {{cell.value}}
+  </mat-grid-tile>
+</mat-grid-list>
